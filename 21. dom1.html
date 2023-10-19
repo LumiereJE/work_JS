@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #title {
+            font-size: 1.5em;
+            color: darkgreen;
+        }
+        .text {
+            font-size: 1.1em;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">title</h1>
+    <p class="text">text_1</p>
+    <p class="text">text_2</p>
+    <script>
+        const title = document.getElementById("title");
+        console.log(title);
+        const textEl = document.getElementsByClassName("text");
+        console.log(textEl);
+
+        
+    </script>
+</body>
+</html>

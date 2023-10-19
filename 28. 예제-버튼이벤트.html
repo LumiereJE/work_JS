@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼클릭시 배경색 바꾸기</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .color_box {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box {
+            width: 140px;
+            height: 40px;
+            flex-wrap: wrap;
+            margin: 4px;
+            color : white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .purple {
+            background-color: purple;
+        }
+        
+        #result {
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="color_box">
+            <p class="box green" onclick="changeBg('green')">Green</p>
+            <p class="box orange" onclick="changeBg('orange')">Orange</p>
+            <p class="box purple" onclick="changeBg('purple')">Purple</p>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        function changeBg(color) {
+            let result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

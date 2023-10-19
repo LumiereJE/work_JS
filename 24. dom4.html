@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text {
+            font-size: 2em;
+        }
+        .active {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .red-color {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">글자를 입력 합니다.</p>
+    <div>
+        <p>내용을 입력합니다</p>
+    </div>
+    <a href="https://google.co.kr">구글</a>
+
+    <script>
+        // 스타일 조작하기
+        const pEl = document.querySelector("#text");
+        pEl.classList.add("active", "red-color");
+
+        // 메서드 속성으로 조작하기
+        const aEl = document.querySelector("a");
+        const href = aEl.getAttribute("href");      // 속성 이름을 읽어옴
+        aEl.setAttribute("href", "https://kakao.com");
+        aEl.innerHTML = "카카오";
+
+
+        // pEl.style.backgroundColor = "#f00";
+        // pEl.style.fontSize = "3em";
+        // pEl.style.color = "#fff";
+
+        // const pEl2 = document.querySelector("div");
+        // pEl2.style.color = "yellow";
+        // pEl2.style.fonSize = "1.6em";
+        // pEl2.style.backgroundColor = "royalBlue";
+    </script>
+</body>
+</html>

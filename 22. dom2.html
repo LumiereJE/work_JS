@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box_1">
+        <p class="text">text-1</p>
+        <p class="text">text-2</p>
+    </div>
+    <div class="box_2">
+        <p class="text">text-3</p>
+        <p class="text">text-4</p>
+    </div>
+    <script>
+        // CSS 선택자를 사용하는 query 메서드
+        const el = document.querySelector(".box-1");
+        const text = document.querySelectorAll(".text");
+        console.log(text);
+        for(let e of text) {
+            console.log(e);
+        }
+    </script>
+</body>
+</html>

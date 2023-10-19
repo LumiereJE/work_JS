@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .wrap {
+            margin: 100px auto 0;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(189, 209, 238);
+            border-style: none;
+            border-radius: 50%;
+            box-shadow: 1px 1px 9px 0px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .text_box {
+            text-align: center;
+        }
+        p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="text_box">
+            <p>학원 수료까지</p>
+            <span id="Dday"></span>
+            <span>일 남았습니다.</span>
+        </div>
+    </div>
+    
+    <script>
+
+        let dDay = new Date("2024/02/21");
+        let now = new Date();
+
+        let toDay = dDay.getTime();
+        let toNow = now.getTime();
+        let remainTime = toDay - toNow;
+
+        // 밀리 초를 일 수로 계산하고 반올림
+        remainTime = Math.round(remainTime/(1000*60*60*24)); 
+        document.querySelector('#Dday').innerHTML = remainTime; 
+
+    </script>
+</body>
+</html>
