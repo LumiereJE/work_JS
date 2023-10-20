@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="username">
+        <button type="submit">Submit</button>
+      </form>
+      
+      <script>
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); // 폼 제출 기본 동작 막기
+          const username = form.elements.username.value;
+          // 입력된 사용자 이름을 사용하여 다른 작업 수행
+        });
+      </script>
+</body>
+</html>

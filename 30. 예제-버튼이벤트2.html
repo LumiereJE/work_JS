@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .color_box {
+            display: flex;
+            width: 100vw;
+            margin: 10px auto;
+        }
+        .box {
+            margin: 2px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            border: 1px solid #ccc;
+            padding: 10px 16px;
+            color: white;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .green {
+            background-color: green;
+        }
+        .orange {
+            background-color: orangered;
+            flex-grow: 3;
+        }
+        .purple {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="color_box">
+            <p class="box green">Green</p>
+            <p class="box orange">Orange</p>
+            <p class="box purple">Purple</p>
+        </div>
+    </div>
+    <script>
+        const btns = document.querySelectorAll(".box");
+        for(let i = 0; i < btns.length; i++) {
+            // click 이벤트 등록해라 
+            btns[i].addEventListener("click", function() {
+                alert(`${this.textContent} 버튼이 눌러졌습니다.`);  // this = 현재 이벤트가 발생 된 대상
+            })
+        }
+    </script>
+</body>
+</html>
