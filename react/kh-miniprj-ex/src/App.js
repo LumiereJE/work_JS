@@ -1,17 +1,27 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import UserStore from "./context/UserStore";
 import Login from "./pages/Login";
-import HOME from "./pages/Home";
+import Home from "./pages/Home";
+import Layout from "./components/Layout";
+import MemberList from "./pages/MemberList";
+import Setting from "./pages/Setting";
 
 function App() {
   return (
-    // 라우터 경로
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<HOME />} />
-      </Routes>
-    </Router>
+    <UserStore>
+      {/* 라우터 경로 */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route element={<Layout />}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/MemberList" element={<MemberList />} />
+            <Route path="/Setting" element={<Setting />} />
+          </Route>
+        </Routes>
+      </Router>
+    </UserStore>
   );
 }
 
