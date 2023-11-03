@@ -9,14 +9,15 @@ const Home = () => {
   const onClickBtn = (num) => {
     switch (num) {
       case 1:
-        navigate("/memberlist");
+        navigate("/Memberlist");
         break; // 대소문자 구분 안함
       case 2:
         break;
       case 3:
+        navigate("/Profile");
         break;
       case 4:
-        navigate("/setting");
+        navigate("/Setting");
         break;
       default:
     }
